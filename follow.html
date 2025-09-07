@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/icofont.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Bravelog 賽事成績查詢網</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!-- topBar -->
+      <header class="basicBox topBar">
+        <h1 class="logo"><a href="index.html">bravelog</a></h1>
+        <a class="more iconFoneSize"></a>
+      </header>
+
+      <!-- 視覺圖 -->
+      <div class="focus">
+        <img src="img/2018taipei.jpg" alt="">
+        <a class="videoBtn" href="https://youtu.be/ogTuLS5YbrY" target="_blank"></a>
+      </div>
+
+      <!-- 主內容區 -->
+      <div class="basicBox container">
+        <div class="content">
+          <!-- 搜尋 -->
+          <div class="searchBar">
+            <input type="text" id="search" class="searchBox" name="searchbox" placeholder="輸入選手姓名 or 號碼 查詢即時成績" value="">
+            <a class="searchBtn iconFoneSize" href="newplayer.html"></a>
+          </div>
+          <!-- end -->
+
+          <!-- 選手追蹤 -->
+          <div class="section">
+            <h4>選手追蹤<span style="color:#9ba0aa;">※點擊 <i class="icofont-ui-love-remove"></i> 取消追蹤</span></h4>
+            <ul class="list card">
+              <li class="followerList">
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">99999</span><span class="name">IKENOTAKAZUYUKI</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">全馬</span><span class="group">F30～45</span><span class="now">start &gt; 9.5k</span>
+                  </div>
+                </a>
+                <a class="unfollow iconFoneSize" href="#"></a>
+              </li>
+              <li class="followerList">
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">12345</span><span class="name">YAKITAROU</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">迷你馬</span><span class="group">F15～25</span><span class="now">尚未出發</span>
+                  </div>
+                </a>
+                <a class="unfollow iconFoneSize" href="#"></a>
+              </li>
+              <li class="followerList">
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">00987</span><span class="name">Chicken Ｗu</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">全馬</span><span class="group">F30～45</span><span class="now">9.5k &gt; Finish</span>
+                  </div>
+                </a>
+                <a class="unfollow iconFoneSize" href="#"></a>
+              </li>
+              <li class="followerList">
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">98765</span><span class="name">胖老爹</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">10K</span><span class="group">M40</span><span class="now finish">大會成績 01:57:05</span>
+                  </div>
+                </a>
+                <a class="unfollow iconFoneSize" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <!-- end -->
+
+          <!-- 查詢列表 -->
+          <div class="section">
+            <h4>查詢結果<span>※點擊 <i class="icofont-ui-love-add"></i> 追蹤選手(最多五名)</span></h4>
+            <ul class="list">
+              <li>
+                <a class="playerBox" href="newplayer.html">
+                  <div class="player">
+                    <span class="number">99999</span><span class="name">吳區肯</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">半馬</span><span class="group">F30</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="addfollow.html"></a>
+              </li>
+              <li>
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">99999</span><span class="name">IKENOTAKAZUYUKI</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">全馬</span><span class="group">F30～45</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="#"></a>
+              </li>
+              <li>
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">99999</span><span class="name">區肯姊姊</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">迷你馬</span><span class="group">F30</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="#"></a>
+              </li>
+              <li>
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">12345</span><span class="name">YAKITAROU</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">迷你馬</span><span class="group">F30</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="#"></a>
+              </li>
+              <li>
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">00987</span><span class="name">Chicken Ｗu</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">半馬</span><span class="group">F30</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="#"></a>
+              </li>
+              <li>
+                <a class="playerBox" href="#">
+                  <div class="player">
+                    <span class="number">98765</span><span class="name">胖老爹</span>
+                  </div>
+                  <div class="cat">
+                    <span class="type">全馬</span><span class="group">F30～45</span>
+                  </div>
+                </a>
+                <a class="follow iconFoneSize" href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <!-- end -->
+
+        </div>
+      </div>
+      <!-- end wrapper -->
+    </div>
+
+    <!-- 頁尾 -->
+    <footer class="basicBox footerBar">
+      <div class="copyright">Copyright © 2017 Taiwan triathlon Co.Ltd. All rights reserved.</div>
+    </footer>
+
+
+    <!-- 目錄 -->
+    <div class="menu">
+      <a class="close iconFoneSize"></a>
+      <div class="eventBox">
+        <ul class="list events">
+          <li>
+            <a href="http://bravelog.tw/index.php?raceMasterId=20181111">
+              <span class="date">2018/11/11</span>
+              <h3>2018 長春藤 LAVA TRI 鐵人系列賽-新北福隆站</h3>
+            </a>
+          </li>
+          <li>
+            <a href="http://bravelog.tw/index.php?raceMasterId=20181028">
+              <span class="date">2018/10/28</span>
+              <h3>2018 長榮航空城市觀光馬拉松</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/21</span>
+              <h3>2018 台東超鐵 Taitung Super 3</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/20</span>
+              <h3>2018 台東超鐵 Taitung Super 3</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/07</span>
+              <h3>2018 IRONMAN Taiwan</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/11/11</span>
+              <h3>2018 長春藤 LAVA TRI 鐵人系列賽-新北福隆站</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/28</span>
+              <h3>2018 長榮航空城市觀光馬拉松</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/21</span>
+              <h3>2018 台東超鐵 Taitung Super 3</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/20</span>
+              <h3>2018 台東超鐵 Taitung Super 3</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="date">2018/10/07</span>
+              <h3>2018 IRONMAN Taiwan</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/meunEvents.js"></script>
+  </body>
+</html>
