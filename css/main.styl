@@ -1,0 +1,662 @@
+mainColor = rgba(255,65,85,1)
+mainColor_Light = rgba(255,130,125,1)
+textColor = rgba(65,75,100,1)
+textColor_Light = rgba(155,160,170,1)
+
+tipsBColor = #7378e1
+tipsGColor = #69e17d
+
+gradation = linear-gradient(200deg, #ff4155 30%, #ff827d 100%)
+
+
+*
+  box-sizing border-box
+  transition .5s
+html, body
+  font-family 'Bai Jamjuree', "微軟正黑體", sans-serif
+  font-size 16px
+  color textColor_Light
+body
+  position relative
+  display flex
+  flex-flow column nowrap
+  justify-content space-between
+  height 100vh
+  letter-spacing 0.5px
+  background-color #fbfbfb
+  overflow auto
+a
+  text-decoration none
+
+.defaulBg
+  &::after
+    position absolute
+    display block
+    content "\edc5"
+    font-family IcoFont
+    font-size 30vw
+    color rgba(mainColor_Light, .3)
+    top 70%
+    left 50%
+    transform translate(-55%, -50%)
+    @media screen and (orientation: landscape)
+      display none
+
+.wrapper
+  width 100%
+
+.basicBox
+  width 100%
+  padding 15px 10px
+
+.iconFoneSize
+  &::after
+    position absolute
+    display block
+    font-family IcoFont
+    font-size 24px
+    top 50%
+    left 50%
+    transform translate(-50%, -50%)
+
+.topBar
+  position relative
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  height 60px
+  .logo
+    width 200px
+    margin 0
+    height 100%
+    a
+      display block
+      height  100%
+      text-indent -9999px
+      background url("../img/logo.svg") center center no-repeat
+  .more
+    position absolute
+    width 40px
+    height @width
+    left 10px
+    cursor pointer
+    &::after
+      content "\ef75"
+      color textColor
+
+.focus
+  position relative
+  width 100%
+  font-size 0
+  img
+    width 100%
+    height auto
+    object-fit cover
+  .videoBtn
+    position absolute
+    display flex
+    width 100%
+    height 100%
+    top 0
+    &::before
+      position absolute
+      display block
+      content "直播"
+      padding 5px 8px
+      border-radius 4px
+      font-size 12px
+      color #fff
+      top 10px
+      right 10px
+      background-color rgba(textColor, .6)
+    &::after
+      position absolute
+      display flex
+      align-items center
+      justify-content center
+      width calc(20vw - 5px)
+      height 20vw
+      padding-left 5px
+      content "\ec74"
+      font-family IcoFont
+      font-size 8vw
+      color rgba(255, 255, 255,.9)
+      border-radius 100%
+      top 50%
+      left 50%
+      transform translate(-50%, -50%)
+      background-color rgba(textColor, .6)
+      @media screen and (min-width: 768px)
+        width calc(120px - 5px)
+        height 120px
+        font-size 50px
+
+.container
+  position relative
+.content
+  position relative
+  width 100%
+  max-width 1000px
+  margin 0 auto
+  text-align center
+  .searchBar
+    display inline-flex
+    width 80%
+    min-width 300px
+    height 40px
+    .searchBox
+      -webkit-appearance none !important
+      width 80%
+      padding 0 5px
+      border 1px solid mainColor_Light
+      border-radius 10px 0 0 10px
+      font-size 14px
+      outline none
+    .searchBtn
+      position relative
+      width 20%
+      border-radius 0 10px 10px 0
+      background gradation
+      &::after
+        content"\ed11"
+        font-size 20px
+        color #fff
+
+.finishPlayer
+    position relative
+    display inline-flex
+    justify-content center
+    min-width 300px
+    width 80%
+    margin 20px 0
+    padding 10px 15px
+    border-radius 10px
+    color #fff
+    background gradation
+    z-index 2
+
+.share
+  position relative
+  display inline-flex
+  justify-content center
+  align-items center
+  width 100%
+  padding 10px 15px
+  height 40px
+  color #fff
+  background-color #4267b2
+  border-bottom 1px solid #29487d
+  border-radius 10px
+  &::before
+    display inline
+    font-family IcoFont
+    font-size 20px
+    content "\ed37"
+    margin-right 3px
+
+.section
+  width 100%
+  margin 20px 0
+  h4
+    position relative
+    display flex
+    align-items center
+    justify-content space-between
+    margin 0
+    padding 6px 10px
+    text-align left
+    font-weight normal
+    color mainColor
+    &::before
+      position absolute
+      display block
+      content ""
+      width 10px
+      height 4px
+      left -10px
+      background gradation
+    span
+      font-size 12px
+      color mainColor_Light
+    i
+      font-size 14px
+
+.event
+  width 100%
+  padding 0 5px
+  text-align left
+  .date
+    font-size 14px
+  h2
+    margin 0
+    padding-top 5px
+    font-size 20px
+    color textColor
+
+.list
+  margin 0
+  padding 0
+  list-style none
+  li, .idCard, .events
+    display flex
+    align-items center
+    padding 10px 0
+    line-height 1
+    border-bottom 1px solid #eee
+    &:nth-child(even)
+      background-color #f7f7f7
+
+.playerBox
+  min-width 260px
+  padding 0 5px 0 10px
+  flex 1
+  text-align left
+  .player
+    padding-bottom 5px
+    color rgba(textColor,.7) 
+    overflow hidden
+    white-space nowrap
+    text-overflow ellipsis
+    span
+      padding-right 10px
+    .number
+      font-size 18px
+      font-weight 500
+    .name
+      font-weight 600
+  .cat
+    font-size 13px
+    color textColor_Light
+    span
+      margin-left 5px
+      padding-left 5px
+      border-left 1px solid rgba(textColor_Light, .2)
+      &:first-child
+        margin-left 0
+        padding-left 0
+        border none
+    .now
+      float right
+      font-weight 500
+      color tipsBColor
+      border none
+    .finish
+      color tipsGColor
+.follow, .unfollow
+  position relative
+  width 40px
+  height @width
+.follow
+  &::after
+    content "\ec62"
+    color textColor_Light
+  &:hover
+    &::after
+      transition .5s
+      color mainColor_Light
+.unfollow
+  &::after
+    content "\ec64"
+    color mainColor_Light
+  &:hover
+    &::after
+      transition .5s
+      color textColor_Light
+
+.home
+  position absolute
+  width 60px
+  right 10px
+  top 4px
+  font-size 12px
+  text-align right
+  color textColor_Light
+  cursor pointer
+  &::after
+    content "\ea9d"
+    color textColor_Light
+    left 0
+    font-size 18px
+
+.back
+  position absolute
+  width 40px
+  height @width
+  right 20px
+  top 10px
+  font-size 12px
+  color textColor
+  cursor pointer
+    &::after
+      content "\ea93"
+      color textColor
+
+.card
+  width 100%
+  margin-top 10px
+  border-radius 10px
+  background-color #fff
+  box-shadow 0 8px 16px rgba(textColor_Light, .3)
+  .followerList, .idCard
+    padding 15px 0
+    border-bottom 1px dotted rgba(mainColor_Light, .3)
+    &:last-child
+      border none
+    &:nth-child(even)
+      background-color transparent
+    .player
+      color textColor
+      .number
+        font-size 20px
+      .name
+        font-size 18px
+  .idCard
+    border-bottom none
+    border-radius 6px 6px 0 0
+    background gradation
+    .player
+      padding-bottom 10px
+      color #fff
+      .name
+        font-size 24px
+        font-weight 400
+        i
+          display inline-block
+          margin-right 10px
+          transform scaleX(-1)
+    .cat
+      color rgba(#ffffff, .8)
+      span
+        border-left 1px solid rgba(#ffffff, .4)
+        &:first-child
+          border none
+    .unfollow::after
+      color rgba(#ffffff, .6)
+      font-size 30px
+      padding-right 10px
+
+.grade
+  width 100%
+  .bottom
+    border-top 1px dotted #eee
+  .top, .bottom
+    display flex
+    flex-flow row wrap
+    align-items center
+    justify-content space-between
+    padding 15px 0
+    div
+      color textColor
+      border-left  1px solid #eee
+      &::after
+        display block
+        margin-top 10px
+        font-family IcoFont
+        font-size 12px
+        font-weight normal
+        color textColor_Light 
+
+    .total, .myself
+      flex 1
+      padding 0 15px
+      font-size 26px
+      text-align left
+    .allRanking, .sexRanking, .groupRanking
+      flex 1
+      padding-left 14px
+      text-align left
+      font-weight 500
+    .total
+      border-left none
+      font-weight 400
+      &::after
+        content "\edcd  大會成績"
+    .myself
+      font-weight 700
+      color mainColor
+      &::after
+        content "\f022  個人成績"
+    .allRanking
+      border-left none
+      &::after
+        content "\edd7  總排名"
+    .sexRanking
+      &::after
+        content "\edd7  性別排名"
+    .groupRanking
+      &::after
+        content "\edd7  分組排名"
+
+.splits_header, .splits
+  display flex
+  flex-flow row nowrap
+  justify-content space-between
+  width 100%
+  margin 10px 0
+  padding 10px
+  border-bottom 1px solid #eee
+  border-radius 6px
+  background gradation
+  span
+    flex 1
+    font-size 13px
+    font-weight 500
+    color #fff
+    &:nth-child(2), &:nth-child(3)
+      flex 1.5
+.splits
+  background none
+  background-color #f7f7f7
+  span
+    font-size 14px 
+    color textColor_Light
+  &:last-child
+    span
+      color textColor
+
+.forecast
+  background linear-gradient(200deg, #ff9b73 30%, #ffc89b 100%)
+
+ol
+  margin 0
+  padding 0
+
+.note
+  padding-top 10px
+  padding-left 20px
+  text-align justify
+  li
+    margin 5px 0
+    font-size 12px
+    line-height 1.6
+
+.menu
+  position fixed
+  height 100vh
+  width calc(100% - 10px)
+  top 0
+  left -101%
+  overflow hidden
+  background-color mainColor
+  cursor pointer
+  box-shadow 2px 0 8px rgba(0,0,0,0.6)
+  z-index 99
+
+.close
+  position absolute
+  width 40px
+  height @width
+  top 5px
+  right 101%
+  cursor pointer
+  &::after
+    content "\ea9d"
+    color #fff
+
+.eventBox
+  position absolute
+  width calc(100% - 40px)
+  height 100vh
+  background-color #fbfbfb
+  box-shadow 1px 0 4px rgba(0,0,0,0.3)
+  overflow-y auto
+.events
+  width 100%
+  padding 5px 10px
+  li
+    flex-flow column nowrap
+    align-items flex-start
+    padding 10px
+    text-align left
+    a
+      width 100%
+      color textColor
+      .date
+        opacity .6
+      h3
+        margin-top 10px
+        margin-bottom 0
+        font-size 16px
+        line-height 1.3
+
+.footerBar
+  background gradation
+  .copyright
+    max-width 1000px
+    margin 0 auto
+    font-size 12px
+    text-align center
+    color #fff
+
+.selectNow
+  margin -10px 0 5px 0
+  font-size 14vh
+  font-weight bold
+  color transparent
+  background gradation
+  -webkit-background-clip text
+  -webkit-filter drop-shadow(6px 6px 3px rgba(#ff827d, .3))
+  filter drop-shadow(6px 6px 3px rgba(#ff827d, .3))
+  &::after
+    content "km"
+    font-size 14px
+
+.timeLine
+  position relative
+  display flex
+  justify-content space-around
+  width 100%
+  &::before
+    position absolute
+    display block
+    content "領先位置"
+    font-size 12px
+    color textColor_Light
+  &::after
+    position absolute
+    display block
+    content ""
+    width 100%
+    height 2px
+    margin-top 20px
+    background linear-gradient(200deg, rgba(#ff827d, .5) 10%, #ff4155 55%)
+  .point
+    display flex
+    flex-flow column wrap
+    align-items center
+    margin-top 4px
+    padding 10px
+    font-size 13px
+    color textColor_Light
+    z-index 1
+    &::before
+      display block
+      content ""
+      width 10px
+      height @width
+      margin-bottom 3px
+      border 2px solid mainColor
+      border-radius 100%
+      background-color #fff
+  .js-point
+    &::before
+      background gradation
+      transition .4s
+
+
+select
+  -webkit-appearance none
+  -moz-appearance none
+  -ms-appearance none
+  appearance none
+  outline 0
+  box-shadow none
+  border 0 !important
+  background-image none
+
+.selectBox
+  display flex
+  flex-flow row nowrap
+  justify-content space-between
+  width 100% 
+  margin 10px 0
+  font-size 14px
+  background gradation
+  border-radius 6px
+  .select
+    position relative
+    display flex
+    align-items center
+    width 50%
+    height 35px
+    overflow hidden
+    color #fff
+    &::after
+      position absolute
+      display block
+      content "\ea9d"
+      font-family IcoFont
+      color rgba(#fff,.6)
+      font-size 12px
+      padding 0 10px
+      right 0
+      transform rotate(270deg)
+      pointer-events none
+    &:hover::after
+      color rgba(#fff,.6)
+    select
+      width 100%
+      height 100%
+      margin 0
+      padding-left 10px
+      color #fff
+      background-color transparent
+      cursor pointer
+      &::-ms-expand
+        display none
+      option
+        color textColor
+
+.bestList
+  margin 0
+  padding 0
+  li
+    display flex
+    align-items center
+    width 100%
+    margin 10px 0
+    padding 10px 5px 10px 0
+    line-height 1
+    border-bottom 1px solid #eee
+    border-radius 6px
+    background-color #f7f7f7
+    .player
+      color textColor
+    .cat
+      display flex
+      flex-wrap wrap
+      justify-content space-between
+      @media screen and (max-width: 374px)
+        span
+          line-height 1.5
